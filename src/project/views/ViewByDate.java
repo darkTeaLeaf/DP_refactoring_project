@@ -18,6 +18,21 @@ public class ViewByDate implements View {
 
     @Override
     public ArrayList<Task> getObjects(List<TaskUnit> tasks) {
-        return null;
+        ArrayList<Task> result = new ArrayList<>();
+        return filter(result, tasks);
+    }
+
+    private ArrayList<Task> filter(ArrayList<Task> result, List<TaskUnit> tasks) {
+        for (TaskUnit task : tasks) {
+            TaskList<Task> list = task.getTaskList();
+            if (list != null) {
+                filter(result, list.getTaskUnits());
+            } else {
+                if ((task instanceof Task) && (((Task) task).getCreationDate().equals(this.criterion))) {
+                    result.add((Task) task);
+                }
+            }
+        }
+        return result;
     }
 }
