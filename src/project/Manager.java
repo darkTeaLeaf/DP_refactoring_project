@@ -1,6 +1,6 @@
 package project;
 
-import project.commands.ConsoleCommand;
+import project.commands.Command;
 import project.commands.ConsoleCommandParser;
 
 import java.io.BufferedReader;
@@ -13,7 +13,6 @@ public class Manager implements Runnable {
     private final PrintWriter out = new PrintWriter(System.out);
     ConsoleCommandParser consoleCommandParser = new ConsoleCommandParser();
 
-
     public void run() {
         while (true) {
             out.print("> ");
@@ -25,14 +24,8 @@ public class Manager implements Runnable {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            ConsoleCommand consoleCommand = consoleCommandParser.parseCommand(command);
-            defineTheCommand(consoleCommand);
+            Command consoleCommand = consoleCommandParser.parseCommand(command);
+            consoleCommand.execute();
         }
-    }
-    private void defineTheCommand(ConsoleCommand consoleCommand){
-        String com = consoleCommand.getCommand();
-
-
-
     }
 }

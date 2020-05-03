@@ -3,7 +3,7 @@ package project.commands;
 
 public class UnknownCommand implements Command {
     @Override
-    public void execute(String[] attributes) {
+    public void execute() {
 
     }
 }

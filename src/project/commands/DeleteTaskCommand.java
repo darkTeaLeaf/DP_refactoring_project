@@ -1,10 +1,9 @@
 package project.commands;
 
-
-public class CheckCommand implements Command {
+public class DeleteTaskCommand implements Command {
     private long id;
 
-    public CheckCommand(long id) {
+    DeleteTaskCommand(long id){
         this.id = id;
     }
 
