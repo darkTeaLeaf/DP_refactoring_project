@@ -1,4 +1,4 @@
-package main.java.com.codurance.training.tasks;
+package init.tasks.tasks;
 
 public final class Task {
     private final long id;

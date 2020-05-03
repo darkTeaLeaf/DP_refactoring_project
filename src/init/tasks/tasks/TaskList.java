@@ -1,4 +1,4 @@
-package main.java.com.codurance.training.tasks;
+package init.tasks.tasks;
 
 import java.io.BufferedReader;
 import java.io.IOException;

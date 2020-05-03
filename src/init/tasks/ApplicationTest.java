@@ -1,6 +1,6 @@
-package test.java.com.codurance.training.tasks;
+package init.tasks;
 
-import main.java.com.codurance.training.tasks.TaskList;
+import init.tasks.tasks.TaskList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
