@@ -1,18 +1,15 @@
 package test.java.com.codurance.training.tasks;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PipedInputStream;
-import java.io.PipedOutputStream;
-import java.io.PrintWriter;
+import main.java.com.codurance.training.tasks.TaskList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.*;
+
 import static java.lang.System.lineSeparator;
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 
 public final class ApplicationTest {
     public static final String PROMPT = "> ";
