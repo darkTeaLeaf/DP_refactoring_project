@@ -8,6 +8,10 @@ import java.util.List;
 public class TaskList<G extends TaskUnit> {
     private List<TaskUnit> taskUnits = new ArrayList<>();
 
+    public List<TaskUnit> getTaskUnits() {
+        return taskUnits;
+    }
+
     public void add(G taskUnit){
         this.taskUnits.add(taskUnit);
     }
