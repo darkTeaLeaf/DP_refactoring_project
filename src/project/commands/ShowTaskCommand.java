@@ -6,10 +6,10 @@ import project.views.ViewById;
 
 import java.util.ArrayList;
 
-public class CheckCommand implements Command {
+public class ShowTaskCommand implements Command {
     private long id;
 
-    public CheckCommand(long id) {
+    public ShowTaskCommand(long id) {
         this.id = id;
     }
 
@@ -18,7 +18,10 @@ public class CheckCommand implements Command {
         ArrayList<Task> tasks = manager.getTaskList().view(new ViewById(this.id));
 
         if(!tasks.isEmpty()){
-            tasks.get(0).setDone(true);
+            manager.getOut().println("description: " + tasks.get(0).getDescription());
+            manager.getOut().println("deadline: " + tasks.get(0).getDeadline());
+            manager.getOut().println("creation date: " + tasks.get(0).getCreationDate());
+            manager.getOut().println("checked: " + tasks.get(0).isDone());
         }else {
             new ErrorCommand("No task with such ID").execute(manager);
         }

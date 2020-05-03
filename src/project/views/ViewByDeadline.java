@@ -24,12 +24,11 @@ public class ViewByDeadline implements View {
     private ArrayList<Task> filter(ArrayList<Task> result, List<TaskUnit> tasks) {
         for (TaskUnit task : tasks) {
             TaskList<Task> list = task.getTaskList();
-            if (list != null) {
+            if (!list.getTaskUnits().isEmpty()) {
                 filter(result, list.getTaskUnits());
-            } else {
-                if ((task instanceof Task) && (((Task) task).getDeadline().equals(this.criterion))) {
-                    result.add((Task) task);
-                }
+            }
+            if ((task instanceof Task) && (((Task) task).getDeadline().compareTo(this.criterion) == 0)) {
+                result.add((Task) task);
             }
         }
         return result;

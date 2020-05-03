@@ -1,6 +1,6 @@
 package project.commands;
 
-
+import project.Manager;
 public interface Command {
-    void execute();
+    void execute(Manager manager);
 }

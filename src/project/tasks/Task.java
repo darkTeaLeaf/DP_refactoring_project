@@ -40,4 +40,8 @@ public class Task extends TaskUnit {
     public Date getCreationDate() {
         return creationDate;
     }
+
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
+    }
 }

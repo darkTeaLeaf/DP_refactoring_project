@@ -1,18 +1,16 @@
 package project.views;
 
-import project.tasks.Project;
 import project.tasks.Task;
 import project.tasks.TaskList;
 import project.tasks.TaskUnit;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class ViewByDate implements View {
-    private Date criterion;
+public class ViewById implements View {
+    private long criterion;
 
-    public ViewByDate(Date creationDate) {
+    public ViewById(long creationDate) {
         this.criterion = creationDate;
     }
 
@@ -28,7 +26,7 @@ public class ViewByDate implements View {
             if (!list.getTaskUnits().isEmpty()) {
                 filter(result, list.getTaskUnits());
             }
-            if ((task instanceof Task) && (((Task) task).getCreationDate().compareTo(this.criterion) == 0)) {
+            if ((task instanceof Task) && (((Task) task).getId() == this.criterion)) {
                 result.add((Task) task);
             }
         }

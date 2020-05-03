@@ -1,5 +1,10 @@
 package project.commands;
 
+import project.Manager;
+import project.tasks.Task;
+import project.views.ViewById;
+
+import java.util.ArrayList;
 import java.util.Date;
 
 public class DeadlineCommand implements Command {
@@ -12,7 +17,13 @@ public class DeadlineCommand implements Command {
     }
 
     @Override
-    public void execute() {
+    public void execute(Manager manager) {
+        ArrayList<Task> tasks = manager.getTaskList().view(new ViewById(this.id));
 
+        if(!tasks.isEmpty()){
+            tasks.get(0).setDeadline(this.deadline);
+        }else {
+            new ErrorCommand("No task with such ID").execute(manager);
+        }
     }
 }

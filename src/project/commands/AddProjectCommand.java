@@ -1,6 +1,9 @@
 package project.commands;
 
 
+import project.Manager;
+import project.tasks.Project;
+
 public class AddProjectCommand implements Command {
     private String projectName;
 
@@ -9,7 +12,7 @@ public class AddProjectCommand implements Command {
     }
 
     @Override
-    public void execute() {
-
+    public void execute(Manager manager) {
+        manager.getTaskList().add(new Project(this.projectName));
     }
 }
