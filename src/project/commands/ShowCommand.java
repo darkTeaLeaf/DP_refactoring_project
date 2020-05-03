@@ -21,7 +21,8 @@ public class ShowCommand implements Command{
     private void print(Manager manager, List<TaskUnit> tasks, String spaces) {
         for (TaskUnit task : tasks) {
             TaskList<Task> list = task.getTaskList();
-            manager.getOut().println(spaces + ((Task) task).getDescription());
+            String check = ((Task) task).isDone() ? "[x]" : "[ ]";
+            manager.getOut().println(spaces + check + " id " + ((Task) task).getId() + ": " + ((Task) task).getDescription());
             if (list != null) {
                 print(manager, list.getTaskUnits(), spaces + "  ");
             }

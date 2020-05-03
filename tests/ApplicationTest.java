@@ -1,5 +1,3 @@
-package init.tasks;
-
 import init.tasks.tasks.TaskList;
 import org.junit.After;
 import org.junit.Before;
