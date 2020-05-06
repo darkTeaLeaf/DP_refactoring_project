@@ -18,7 +18,10 @@ public class HelpCommand implements Command {
         manager.getOut().println("  view deadline today");
         manager.getOut().println("  delete <task ID>");
         manager.getOut().println("  delete \"<project name>\"");
+        manager.getOut().println("  attach \"<project name>\" \"<task ID>\"");
+        manager.getOut().println("  detach \"<project name>\" \"<task ID>\"");
         manager.getOut().println("  quit");
+        manager.getOut().println("Pattern for entering dates: dd/mm/yyyy");
         manager.getOut().println();
     }
 }

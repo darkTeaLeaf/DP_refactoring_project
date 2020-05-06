@@ -22,6 +22,11 @@ public class ShowTaskCommand implements Command {
             manager.getOut().println("deadline: " + tasks.get(0).getDeadline());
             manager.getOut().println("creation date: " + tasks.get(0).getCreationDate());
             manager.getOut().println("checked: " + tasks.get(0).isDone());
+            if(!tasks.get(0).isSubtask()) {
+                manager.getOut().println("projects to which task is attached: " + tasks.get(0).getProjectList());
+            }else {
+                manager.getOut().println("task to which task is attached: " + tasks.get(0).getProjectList());
+            }
         }else {
             new ErrorCommand("No task with such ID").execute(manager);
         }

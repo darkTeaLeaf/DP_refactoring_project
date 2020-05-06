@@ -38,7 +38,7 @@ public class AddTaskToProjectCommand implements Command {
                     e.printStackTrace();
                 }
 
-                taskUnit.getTaskList().add(new Task(id, description, false, deadline, today));
+                taskUnit.getTaskList().add(new Task(id, description, false, deadline, today, (Project) taskUnit));
                 manager.getOut().println("Task created with ID " + id);
                 mark = true;
             }

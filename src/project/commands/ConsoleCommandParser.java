@@ -113,18 +113,32 @@ public class ConsoleCommandParser {
                     if (sub.size() == 1 && isNumeric(sub.get(0))) {
                         consoleCommand = new CheckCommand(Long.parseLong(sub.get(0)));
                     } else {
-                        consoleCommand = new ErrorCommand("Invalid arguments for command " + sub.get(0));
+                        consoleCommand = new ErrorCommand("Invalid arguments for command " + list.get(0));
                     }
                     break;
                 case UNCHECK:
                     if (sub.size() == 1 && isNumeric(sub.get(0))) {
                         consoleCommand = new UncheckCommand(Long.parseLong(sub.get(0)));
                     } else {
-                        consoleCommand = new ErrorCommand("Invalid arguments for command " + sub.get(0));
+                        consoleCommand = new ErrorCommand("Invalid arguments for command " + list.get(0));
                     }
                     break;
                 case HELP:
                     consoleCommand = new HelpCommand();
+                    break;
+                case ATTACH:
+                    if (sub.size() == 2 && isNumeric(sub.get(1))){
+                        consoleCommand = new AttachTaskToProjectCommand(Long.parseLong(sub.get(1)), sub.get(0));
+                    }else {
+                        consoleCommand = new ErrorCommand("Invalid arguments for command " + list.get(0));
+                    }
+                    break;
+                case DETACH:
+                    if (sub.size() == 2 && isNumeric(sub.get(1))){
+                        consoleCommand = new DetachTaskFromProjectCommand(Long.parseLong(sub.get(1)), sub.get(0));
+                    }else {
+                        consoleCommand = new ErrorCommand("Invalid arguments for command " + list.get(0));
+                    }
                     break;
                 default:
                     consoleCommand = new UnknownCommand();

@@ -35,7 +35,7 @@ public class AddTaskToTaskCommand implements Command {
                 e.printStackTrace();
             }
 
-            tasks.get(0).getTaskList().add(new Task(id, description, false, deadline, today));
+            tasks.get(0).getTaskList().add(new Task(id, description, false, deadline, today, tasks.get(0)));
             manager.getOut().println("Task created with ID " + id);
         }else {
             new ErrorCommand("No task with such ID").execute(manager);
