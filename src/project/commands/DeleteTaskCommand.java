@@ -1,7 +1,6 @@
 package project.commands;
 
 import project.Manager;
-import project.tasks.Project;
 import project.tasks.Task;
 import project.tasks.TaskList;
 import project.tasks.TaskUnit;
@@ -21,6 +20,9 @@ public class DeleteTaskCommand implements Command {
         Task task = null;
         for (TaskUnit taskUnit : tasks) {
             task = remove(taskUnit.getTaskList());
+            if(task != null){
+                break;
+            }
         }
 
         if (task == null) {

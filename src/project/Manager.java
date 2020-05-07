@@ -11,11 +11,21 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 public class Manager implements Runnable {
-    private final BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    private final PrintWriter out = new PrintWriter(System.out);
-    ConsoleCommandParser consoleCommandParser = new ConsoleCommandParser();
+    private BufferedReader in;
+    private PrintWriter out;
+    private final ConsoleCommandParser consoleCommandParser = new ConsoleCommandParser();
     private TaskList<Project> taskList = new TaskList<>();
     private long taskCounter = 0;
+
+    public Manager(){
+        this.in = new BufferedReader(new InputStreamReader(System.in));
+        this.out = new PrintWriter(System.out);
+    }
+
+    public Manager(BufferedReader in, PrintWriter out){
+        this.in = in;
+        this.out = out;
+    }
 
     public void run() {
         while (true) {
@@ -24,7 +34,6 @@ public class Manager implements Runnable {
             String command;
             try {
                 command = in.readLine();
-
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
