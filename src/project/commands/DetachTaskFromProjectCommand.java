@@ -9,6 +9,11 @@ import project.views.ViewById;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Command to detach the task from concrete project
+ * (cannot detach if task is attached to only one project)
+ */
+
 public class DetachTaskFromProjectCommand implements Command {
     private long id;
     private String projectName;

@@ -6,6 +6,10 @@ import project.views.ViewById;
 
 import java.util.ArrayList;
 
+/**
+ * Command to check the task as not done
+ */
+
 public class UncheckCommand implements Command {
     private long id;
 

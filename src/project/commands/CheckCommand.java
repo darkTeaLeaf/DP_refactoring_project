@@ -6,6 +6,10 @@ import project.views.ViewById;
 
 import java.util.ArrayList;
 
+/**
+ * Command to check the task as done
+ */
+
 public class CheckCommand implements Command {
     private long id;
 

@@ -10,6 +10,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Command to add new task to concrete project
+ */
+
 public class AddTaskToProjectCommand implements Command {
     private String projectName;
     private String description;

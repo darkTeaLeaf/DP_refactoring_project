@@ -1,5 +1,10 @@
 package project.tasks;
 
+/**
+ * Represents the project which consists
+ * of several tasks
+ */
+
 public class Project extends TaskUnit {
     private final String name;
 

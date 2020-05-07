@@ -6,6 +6,11 @@ import project.views.ViewById;
 
 import java.util.ArrayList;
 
+/**
+ * Command to display information
+ * about the concrete task
+ */
+
 public class ShowTaskCommand implements Command {
     private long id;
 

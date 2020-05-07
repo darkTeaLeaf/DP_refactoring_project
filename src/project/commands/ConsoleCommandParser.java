@@ -10,6 +10,11 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Class responsible for parsing the command
+ * form @code{String} to @code{Command}
+ */
+
 public class ConsoleCommandParser {
     public Command parseCommand(String input) {
         List<String> list = new ArrayList<>();

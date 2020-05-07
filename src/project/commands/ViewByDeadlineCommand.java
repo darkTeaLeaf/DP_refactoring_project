@@ -7,6 +7,11 @@ import project.views.ViewByDeadline;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Command to display the tasks which
+ * deadline is equal to input one
+ */
+
 public class ViewByDeadlineCommand implements Command {
     private Date deadline;
 

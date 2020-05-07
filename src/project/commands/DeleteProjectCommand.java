@@ -2,10 +2,15 @@ package project.commands;
 
 import project.Manager;
 import project.tasks.Project;
-import project.tasks.Task;
 import project.tasks.TaskUnit;
 
 import java.util.List;
+
+/**
+ * Command to delete project with all
+ * tasks attached to it (except whose
+ * attached to another projects)
+ */
 
 public class DeleteProjectCommand implements Command {
     private String projectName;

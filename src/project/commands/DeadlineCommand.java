@@ -7,6 +7,10 @@ import project.views.ViewById;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Command to set new deadline to concrete task
+ */
+
 public class DeadlineCommand implements Command {
     private long id;
     private Date deadline;

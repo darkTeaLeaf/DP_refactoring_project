@@ -2,6 +2,10 @@ package project.commands;
 
 import project.Manager;
 
+/**
+ * Command to display an error
+ */
+
 public class ErrorCommand implements Command{
     private String message;
 

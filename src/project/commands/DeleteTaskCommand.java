@@ -7,6 +7,10 @@ import project.tasks.TaskUnit;
 
 import java.util.List;
 
+/**
+ * Command to delete concrete task with all its subtasks
+ */
+
 public class DeleteTaskCommand implements Command {
     private long id;
 

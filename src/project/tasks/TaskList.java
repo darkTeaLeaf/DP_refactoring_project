@@ -5,6 +5,11 @@ import project.views.View;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents the list functionality
+ * @param <G> represents the type of stored instances (can be Project or Task)
+ */
+
 public class TaskList<G extends TaskUnit> {
     private List<TaskUnit> taskUnits = new ArrayList<>();
 

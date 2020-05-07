@@ -9,6 +9,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Command to add new subtask to concrete task
+ */
+
 public class AddTaskToTaskCommand implements Command {
     private long id;
     private String description;

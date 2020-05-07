@@ -10,6 +10,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
+/**
+ * Organization of the whole application process
+ *  - stating the main application thread
+ *  - getting command from user and transfering it to parser
+ *  - getting the instance of @code{Command} and execute it
+ *  - collection the global for all application instances of input,
+ *    output, parser, main task list and task counter
+ */
+
 public class Manager implements Runnable {
     private BufferedReader in;
     private PrintWriter out;

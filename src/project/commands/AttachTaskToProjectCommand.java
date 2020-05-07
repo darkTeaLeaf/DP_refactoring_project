@@ -9,6 +9,11 @@ import project.views.ViewById;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Command to attach existing task to project,
+ * so it can appear in a few projects
+ */
+
 public class AttachTaskToProjectCommand implements Command {
     private long id;
     private String projectName;

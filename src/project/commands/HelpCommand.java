@@ -2,6 +2,10 @@ package project.commands;
 
 import project.Manager;
 
+/**
+ * Command to display helpful information
+ */
+
 public class HelpCommand implements Command {
     @Override
     public void execute(Manager manager) {

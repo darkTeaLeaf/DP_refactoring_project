@@ -7,6 +7,11 @@ import project.views.ViewByDate;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Command to display the tasks which
+ * date of creation is equal to input one
+ */
+
 public class ViewByDateCommand implements Command {
     private Date date;
 

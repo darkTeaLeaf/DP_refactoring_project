@@ -4,6 +4,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Represents the task which can contain subtasks
+ * Can be task (which is attached to one or multiple projects)
+ * or subtask (which is attached to only one task)
+ *
+ * Also, collects information about the projects (or task)
+ * to which the task is attached
+ */
+
 public class Task extends TaskUnit {
     private final long id;
     private final String description;

@@ -8,6 +8,11 @@ import project.tasks.TaskUnit;
 
 import java.util.List;
 
+/**
+ * Command to show the whole structure of
+ * task created in the application
+ */
+
 public class ShowCommand implements Command{
     @Override
     public void execute(Manager manager) {
